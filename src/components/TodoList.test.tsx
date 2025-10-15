@@ -7,7 +7,7 @@ describe("TodoList Component", () => {
     render(<TodoList />);
 
     const input = screen.getByPlaceholderText("Nueva tarea");
-    const addButton = screen.getByText("Agregarr"); // fallo
+    const addButton = screen.getByText("Agregar");
 
     // Simular agregar tarea
     fireEvent.change(input, { target: { value: "Comprar leche" } });
@@ -29,7 +29,7 @@ describe("TodoList Component", () => {
 
     // Eliminar tarea
     const deleteButton = screen.getByText("Eliminar");
-    fireEvent.click(deleteButto); // fallo
+    fireEvent.click(deleteButton);
 
     // Validar que la tarea desapareció
     expect(screen.queryByText("Estudiar React")).not.toBeInTheDocument();

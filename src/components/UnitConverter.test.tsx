@@ -20,7 +20,7 @@ describe("UnitConverter Component", () => {
     const inputFahrenheit = screen.getByLabelText(/Fahrenheit/i) as HTMLInputElement;
 
     // Escribir en el input de Celsius
-    fireEvent.change(inputCelsiu, { target: { value: "40" } });
+    fireEvent.change(inputCelsius, { target: { value: "40" } });
 
     // Clic en el botón de convertir
     fireEvent.click(button);

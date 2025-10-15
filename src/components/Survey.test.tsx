@@ -6,7 +6,7 @@ describe('Survey Component', () => {
   test('renderiza formulario inicial, permite seleccionar rating y enviar', () => {
     render(<Survey />);
 
-    expect(screen.getByTestId('survey-form')).toBeInTheDocument();
+    expect(screen.getByTestId('survey-formm')).toBeInTheDocument();// fallo
 
     const submit = screen.getByTestId('submit-button') as HTMLButtonElement;
     expect(submit).toBeDisabled();
@@ -24,7 +24,7 @@ describe('Survey Component', () => {
 
     // Reiniciar
     const reset = screen.getByTestId('reset-button');
-    fireEvent.click(reset);
+    fireEvent.click(rese); //fallo
     expect(screen.getByTestId('survey-form')).toBeInTheDocument();
   });
 

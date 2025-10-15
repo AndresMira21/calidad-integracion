@@ -9,7 +9,7 @@ describe("UnitConverter Component", () => {
     expect(screen.getByText(/Conversor de Unidades/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/Celsius/i)).toBeInTheDocument();
     expect(screen.getByLabelText(/Fahrenheit/i)).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: /Convertir/i })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /Converti/i })).toBeInTheDocument();
   });
 
   test("convierte Celsius a Fahrenheit correctamente", () => {

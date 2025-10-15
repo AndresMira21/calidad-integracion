@@ -5,7 +5,7 @@ describe('ShoppingCart', () => {
   test('El carrito inicia vacío', () => {
     render(<ShoppingCart />);
 
-    expect(screen.getByText(/El carrito está vacíoo/i)).toBeInTheDocument();//fallo
+    expect(screen.getByText(/El carrito está vacío/i)).toBeInTheDocument();
     expect(screen.getByText(/Total: \$0/i)).toBeInTheDocument();
   });
 
@@ -23,7 +23,7 @@ describe('ShoppingCart', () => {
     render(<ShoppingCart />);
 
     const addButton = screen.getAllByText(/Agregar al carrito/i)[0];
-    fireEvent.click(addButto);//fallo
+    fireEvent.click(addButton);
 
     const removeButton = screen.getByText(/Eliminar/i);
     fireEvent.click(removeButton);
